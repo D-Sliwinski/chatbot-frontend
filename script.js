@@ -11,10 +11,10 @@ async function sendMessage() {
     const body = document.getElementById("chat-body");
 
     body.innerHTML += 
-        <div class="msg-row user">
+        `<div class="msg-row user">
             <div class="avatar user-av">Ty</div>
             <div class="bubble usr">${text}</div>
-        </div>
+        </div>`
     ;
     body.scrollTop = body.scrollHeight;
     history.push({ role: "user", content: text });
