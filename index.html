@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asystent Informacji Publicznej</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="header-text">
+      <div class="header-title">Asystent Informacji Publicznej</div>
+      <div class="header-sub">gov.pl</div>
+    </div>
+    <button class="btn-new" onclick="clearChat()">Nowa rozmowa</button>
+  </header>
+  <div class="chat-body" id="chat-body">
+    <div class="msg-row bot">
+      <div class="avatar bot">AI</div>
+      <div class="bubble bot">
+        <p>Dzień dobry. Jestem <strong>Asystentem Informacji Publicznej</strong>.</p>
+        <p>Jak mogę Ci dzisiaj pomóc?</p>
+      </div>
+    </div>
+    <div class="chips-row" id="suggestions">
+      <button class="chip" onclick="sendSuggestion('Jak założyć działalność gospodarczą?')">Jak założyć działalność gospodarczą?</button>
+      <button class="chip" onclick="sendSuggestion('Jak uzyskać dowód osobisty?')">Jak uzyskać dowód osobisty?</button>
+    </div>
+  </div>
+    <div class="input-area">
+      <textarea id="msg-input" placeholder="Zadaj pytanie…" rows="1" onkeydown="handleKey(event)"></textarea>
+      <button class="btn-send" id="btn-send" onclick="sendMessage()">+</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
